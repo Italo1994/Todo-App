@@ -21,7 +21,7 @@ html, body {
 }
 
 #header {
-  background: url("../../images/bg-desktop-light.jpg");
+  background: url("./images/bg-desktop-light.jpg");
   background-repeat: no-repeat;
   background-size: cover contain;
   height: 240px;
