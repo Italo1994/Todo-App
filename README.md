@@ -1,6 +1,7 @@
 # Frontend Mentor - Todo app
 
-# Link for the project in github pages: https://italo1994.github.io/Todo-App/
+# Link for the project in github pages: 
+https://italo1994.github.io/Todo-App/
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
 
