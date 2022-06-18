@@ -9,28 +9,46 @@
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body>
+<body id="main-body">
+  <div class="container">
 
-  Todo
+    <header id="header">
+      <div class="box title-area">
+        <h1>TODO</h1>
+        <a href="#" onclick="alter_bg()">
+          <img src="./images/icon-moon.svg" alt="" class="dark_and_light_button" id="img_icon">
+        </a>
+      </div>
+    </header> <!--End of tag header-->
 
-  <!-- Add dynamic number --> items left
+    <main id="main">
+      <div class="box list-area">
+        <table>
+          <tr>
+            <td>
+              <input type="text" placeholder="Create a new todo..."/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main> <!-- End of tag main-->
 
-  All
-  Active 
-  Completed
+    <footer id="footer">
+      <p>
+        Drag and drop to reorder list
+      </p>
+    </footer> <!--End of tag footer-->
 
-  Clear Completed
+  </div>
 
-  Drag and drop to reorder list
-
-  <div class="attribution">
+  <!-- Add dynamic number --> 
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
