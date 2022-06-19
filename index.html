@@ -18,20 +18,21 @@
       <div class="box title-area">
         <h1>TODO</h1>
         <a href="#" onclick="alter_bg()">
-          <img src="./images/icon-moon.svg" alt="" class="dark_and_light_button" id="img_icon">
+          <img src="images/icon-moon.svg" alt="" class="dark_and_light_button" id="img_icon">
         </a>
       </div>
     </header> <!--End of tag header-->
 
     <main id="main">
       <div class="box list-area">
-        <table>
-          <tr>
-            <td>
-              <input type="text" placeholder="Create a new todo..."/>
-            </td>
-          </tr>
-        </table>
+        <ul>
+          <li id="todo-add"><input type="text" id="todo-text" name="todo-text" placeholder="Create a new todo..."> <a href="#" id="button-add" onclick="addTodo()">add</a></li>
+          <form action="">
+            <ul id="list">
+
+            </ul>
+          </form>
+        </ul>
       </div>
     </main> <!-- End of tag main-->
 

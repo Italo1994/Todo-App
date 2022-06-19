@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* === COLORS === */
@@ -11,7 +13,8 @@ html, body {
   width: 100vw;
   height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .container {
@@ -20,14 +23,26 @@ html, body {
   color: #4b4949;
 }
 
+.box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 #header {
-  background: url("./images/bg-desktop-light.jpg");
+  background: url("../../images/bg-desktop-light.jpg");
   background-repeat: no-repeat;
-  background-size: cover contain;
+  background-size: cover;
   height: 240px;
   width: 100%;
   color: #fff;
-  z-index: 1;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  padding: 40px 20px;
 }
 
 a:link {
@@ -43,21 +58,8 @@ a:link {
 #main {
   background-color: #fff;
   height: 100%;
-  height: 368px;
-  z-index: 2;
-}
-
-.box {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.title-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50%;
-  padding: 40px 20px;
+  position: relative;
+  top: -5px;
 }
 
 .list-area {
@@ -66,37 +68,77 @@ a:link {
   padding: 0 5px;
 }
 
-.list-area tr td {
-  width: 600px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 5px 4px 9px 2px rgba(204, 204, 204, 0.89);
-}
-
-.list-area tr td input {
+.list-area ul li input {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   font-size: 18px;
-  width: 600px;
-  max-width: 600px;
+  color: #4b4949;
+  width: 100%;
+  max-width: 100%;
   border: none;
 }
 
-footer {
+input:focus {
+  border: 0 none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+input::placeholder {
+  color: #4b4949;
+  font-size: 18px;
+}
+
+form {
+  width: 100%;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  width: 100%;
+  background-color: #fff;
+  color: #4b4949;
+  border-radius: 2px;
+  box-shadow: 2px 2px 7px 2px rgba(204, 204, 204, 0.89);
+  margin-top: 15px;
+  padding: 5px;
+}
+
+#todo-add {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+}
+
+#button-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#button-add:hover {
+  background-color: rgba(0, 0, 0, 0.28);
+}
+
+#footer {
   width: 100%;
   height: 80px;
-  background: #181824;
-  position: absolute;
+  background-color: #fff;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 h1 {
   letter-spacing: 5px;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */
