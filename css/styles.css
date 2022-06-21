@@ -13,7 +13,7 @@ html, body {
   width: 100vw;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #fff;
 }
 
@@ -104,8 +104,8 @@ li {
   color: #4b4949;
   border-radius: 2px;
   box-shadow: 2px 2px 7px 2px rgba(204, 204, 204, 0.89);
-  margin-top: 15px;
-  padding: 5px;
+  margin-top: 0px;
+  padding: 10px;
 }
 
 #todo-add {
@@ -123,6 +123,10 @@ li {
 
 #button-add:hover {
   background-color: rgba(0, 0, 0, 0.28);
+}
+
+#list {
+  width: 100%;
 }
 
 #footer {
