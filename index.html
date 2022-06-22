@@ -8,6 +8,12 @@
   
   <title>Frontend Mentor | Todo app</title>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- JQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
@@ -25,14 +31,14 @@
 
     <main id="main">
       <div class="box list-area">
-        <ul>
-          <li id="todo-add"><input type="text" id="todo-text" name="todo-text" placeholder="Create a new todo..."> <a href="#" id="button-add" onclick="addTodo()">add</a></li>
-          <form action="">
-            <ul id="list">
+        <div>
+          <span id="todo-add"><input type="text" id="todo-text" name="todo-text" placeholder="Create a new todo..."> <a href="#" id="button-add" onclick="addTodo()">add</a></span>
+          <!-- <form action=""> -->
+            <div id="list">
 
-            </ul>
-          </form>
-        </ul>
+            </div>
+          <!-- </form> -->
+        </div>
       </div>
 
       <footer id="footer">

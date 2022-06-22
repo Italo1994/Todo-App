@@ -64,7 +64,7 @@ a:link
     top: -110px
     padding: 0 5px
 
-.list-area ul li input
+.list-area div span input
     display: inline-block
     padding: 5px
     font-size: 18px
@@ -82,30 +82,33 @@ input::placeholder
     color: $custom_gray
     font-size: 18px
 
-form
-    width: 100%
-    padding: 0
-
-ul
-    list-style: none
-
-li
+span
     width: 100%
     background-color: $white
     color: $custom_gray
-    border-radius: 2px
     box-shadow: 2px 2px 7px 2px rgba(204,204,204,0.89)
     margin-top: 0px
     padding: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.text-id
+    color: transparent
+
+i
+    width: 15px
 
 #todo-add
     display: grid
     grid-template-columns: 7fr 1fr
+    padding: 5px
 
 #button-add
     display: flex
     justify-content: center
     align-items: center
+    padding: 5px
     border: none
     background-color: rgba(0, 0, 0, .2)
 
@@ -113,7 +116,10 @@ li
     background-color: rgba(0, 0, 0, .28)
 
 #list
-    width: 100%
+    display: grid
+    grid-template-columns: 1fr 9fr
+    justify-content: center
+    align-items: center
 
 #footer
     width: 100%
@@ -128,12 +134,3 @@ li
 h1
     letter-spacing: 5px
     font-size: 40px
-
-
-
-// .list-area tr td
-//     width: 600px
-//     background-color: $white
-//     border-radius: 10px
-//     box-shadow: 5px 4px 9px 2px rgba(204,204,204,0.89)
-
