@@ -2,10 +2,15 @@ var container = document.querySelector('.container');
 var img_icon = document.querySelector("#img_icon");
 var img_header = document.querySelector("#header");
 var main = document.querySelector('#main');
+var function_bar = document.getElementById("function-bar");
 var footer = document.querySelector("#footer");
-var COUNT_CLICKS = 0;
+
+var items_left = document.getElementById("items-left");
+var quant_items_left = 0;
+
+var COUNT_CLICKS = 0; // variável para controlar o fundo dark ou light pelo valor ímpar ou par
 var QUANT_ICONS = 0;
-var count = 0;
+var count = 0; // variável contador para indexar os itens que são adicionados
 
 
 function alter_bg() {
@@ -32,16 +37,34 @@ function alter_bg() {
 
 var todo_text = document.getElementById("todo-text");
 var button_add = document.getElementById("button-add");
-
 var list = document.getElementById("list");
 var inputCheckbox = [];
 var item = [];
+var itemSize = item.length;
 var deleteIcone = [];
 var text_delete = [];
+
+if(itemSize == 0) {
+    function_bar.style.display = 'none';
+}
 
 function addTodo() {
     if(todo_text.value.length < 1) {
         return 0;
+    }
+
+    /*
+    * incrementa a quantidade de itens restantes na lista
+    */
+    quant_items_left++;
+    items_left.innerHTML = quant_items_left + ' items left';
+
+    /* 
+    * verifica o tamanho do vetor e exibe ou não a barra de ferramentas
+    */
+    itemSize++;
+    if(itemSize > 0) {
+        function_bar.style.display = 'grid';
     }
 
     inputCheckbox[count] = document.createElement("input");
@@ -49,19 +72,19 @@ function addTodo() {
     inputCheckbox[count].setAttribute('id', count);
     inputCheckbox[count].style.width = '100%';
     inputCheckbox[count].style.height = '100%';
+    inputCheckbox[count].style.borderRadius = '40px';
 
     item[count] = document.createElement("span");
     item[count].setAttribute('id', count);
     item[count].style.width = '100%';
+    item[count].style.borderRadius = '2.5px';
     item[count].setAttribute('id', QUANT_ICONS+1);
 
     deleteIcone[count] = document.createElement("i");
     deleteIcone[count].setAttribute('class', 'fa-solid fa-trash');
     deleteIcone[count].setAttribute('id', count);
-    // deleteIcone[count].innerHTML = count + 1;
     deleteIcone[count].setAttribute('onclick', 'deleteIcon(this.id)');
     deleteIcone[count].style.cursor = 'pointer';
-    
 
     var text = document.createTextNode(todo_text.value);
 
@@ -75,8 +98,17 @@ function addTodo() {
     count++;
 }
 
-function deleteIcon(e) {
-    inputCheckbox[e].style.display = 'none';
-    item[e].style.display = 'none';
-    deleteIcone[e].style.display = 'none';
+function deleteIcon(id) {
+    inputCheckbox[id].style.display = 'none';
+    item[id].style.display = 'none';
+    deleteIcone[id].style.display = 'none';
+    
+    itemSize--;
+}
+
+function clearAll() {
+    for(let i=0; i<item.length; i++) {
+        item[i].style.display = 'none';
+    }
+    itemSize = 0;
 }

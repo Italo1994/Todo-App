@@ -31,20 +31,32 @@
 
     <main id="main">
       <div class="box list-area">
-        <div>
+        <div id="container-list">
           <span id="todo-add"><input type="text" id="todo-text" name="todo-text" placeholder="Create a new todo..."> <a href="#" id="button-add" onclick="addTodo()">add</a></span>
-          <!-- <form action=""> -->
-            <div id="list">
+          <div id="list">
 
+          </div>
+          
+          <div id="function-bar">
+            <div>
+              <p id="items-left">0 items left</p>
             </div>
-          <!-- </form> -->
+            <div>
+              <a href="#" class="link-bar">All</a>
+              <a href="#" class="link-bar">Active</a>
+              <a href="#" class="link-bar">Complete</a>
+            </div>
+            <div>
+              <a href="#" class="link-bar" onclick="clearAll()">Clear Completed</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <footer id="footer">
         <p>
           <!-- Drag and drop to reorder list -->
-          <p> &copy; Developed by Italo Hortiz</p>
+           &copy; Developed by Italo Hortiz
         </p>
       </footer> <!--End of tag footer-->
     </main> <!-- End of tag main-->
