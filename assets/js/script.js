@@ -37,11 +37,11 @@ function alter_bg() {
 
 var todo_text = document.getElementById("todo-text");
 var button_add = document.getElementById("button-add");
-var list = document.getElementById("list");
+var list = document.getElementById("list"); // container da lista de tarefas
 var inputCheckbox = [];
-var item = [];
-var itemSize = item.length;
-var deleteIcone = [];
+var item = []; // conteúdo da lista
+var itemSize = item.length; // tamanho da lista de tarefas
+var deleteIcone = []; // lista de ícones para deletar sua respectiva tarefa
 var text_delete = [];
 
 if(itemSize == 0) {
@@ -49,6 +49,9 @@ if(itemSize == 0) {
 }
 
 function addTodo() {
+    /*
+    * verifica se o usuário já adicionou alguma tarefa
+    */
     if(todo_text.value.length < 1) {
         return 0;
     }
@@ -70,6 +73,7 @@ function addTodo() {
     inputCheckbox[count] = document.createElement("input");
     inputCheckbox[count].setAttribute('type', 'checkbox');
     inputCheckbox[count].setAttribute('id', count);
+    inputCheckbox[count].setAttribute('onclick', 'getHighlighter(this.id)');
     inputCheckbox[count].style.width = '100%';
     inputCheckbox[count].style.height = '100%';
     inputCheckbox[count].style.borderRadius = '40px';
@@ -111,4 +115,12 @@ function clearAll() {
         item[i].style.display = 'none';
     }
     itemSize = 0;
+}
+
+function getHighlighter(id) {
+    if(inputCheckbox[id].checked) {
+        item[id].style.textDecoration = 'line-through';
+    } else {
+        item[id].style.textDecoration = '';
+    }
 }
